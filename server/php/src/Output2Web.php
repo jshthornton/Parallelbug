@@ -10,9 +10,11 @@ Class Output2Web {
 			'filename' => uniqid(),
 			'format' => 'json',
 			'meta' => true,
+			'meta_key' => '__meta__',
 			'date_format' => 'Y-m-d H:i:s',
 			'append' => false,
-			'data_var' => 'dump'
+			'data_key' => 'dump',
+			'append_group_key' => '__append_group__'
 		), $opts);
 
 		$filename = self::$dir . DIRECTORY_SEPARATOR . $opts['filename'];
@@ -21,14 +23,14 @@ Class Output2Web {
 			$now = time();
 
 			$data = array(
-				'__meta__' => array(
+				$opts['meta_key'] => array(
 					'length' => count($data),
 					'type' => gettype($data),
 					'timestamp' => $now,
 					'timestamp_pretty' => date($opts['date_format'], $now)
 				),
 
-				$opts['data_var'] => $data
+				$opts['data_key'] => $data
 			);
 		}
 
@@ -41,7 +43,7 @@ Class Output2Web {
 
 				$_old_data = json_decode($old_data, true);
 
-				if(isset($_old_data['__append_group__'])) {
+				if(isset($_old_data[$opts['append_group_key']])) {
 					$tmp = $_old_data;
 					$tmp[] = $data;
 
@@ -49,7 +51,7 @@ Class Output2Web {
 					unset($tmp);
 				} else {
 					$tmp = array(
-						'__append_group__',
+						$opts['append_group_key'],
 						$_old_data,
 						$data
 					);
