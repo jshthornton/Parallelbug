@@ -15,6 +15,26 @@ var_dump(Output2Web::dump(array(
 	'filename' => 'ass_array'
 )));
 
+var_dump(Output2Web::dump(array(
+	'foo' => 'blah'
+), array(
+	'filename' => 'append_fail',
+	'append' => true
+)));
+
+var_dump(Output2Web::dump(array(
+	'foo' => 'blah'
+), array(
+	'filename' => 'append'
+)));
+
+var_dump(Output2Web::dump(array(
+	'foo' => 'blah'
+), array(
+	'filename' => 'append',
+	'append' => true
+)));
+
 
 var_dump(Output2Web::dump(true, array(
 	'filename' => 'true'
