@@ -11,7 +11,8 @@ Class Output2Web {
 			'format' => 'json',
 			'meta' => true,
 			'date_format' => 'Y-m-d H:i:s',
-			'append' => false
+			'append' => false,
+			'data_var' => 'dump'
 		), $opts);
 
 		$filename = self::$dir . DIRECTORY_SEPARATOR . $opts['filename'];
@@ -27,7 +28,7 @@ Class Output2Web {
 					'timestamp_pretty' => date($opts['date_format'], $now)
 				),
 
-				'dump' => $data
+				$opts['data_var'] => $data
 			);
 		}
 

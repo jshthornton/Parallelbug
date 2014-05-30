@@ -15,6 +15,7 @@ var_dump(Output2Web::dump(array(
 	'filename' => 'ass_array'
 )));
 
+// Supposed to fail
 var_dump(Output2Web::dump(array(
 	'foo' => 'blah'
 ), array(
