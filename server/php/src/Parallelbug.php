@@ -1,6 +1,6 @@
 <?php
 
-Class Output2Web {
+Class Parallelbug {
 	public static $dir = NULL; // No trailing slash
 
 	public static function dump($data, $opts) {
