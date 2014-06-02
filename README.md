@@ -1,7 +1,7 @@
 Parallelbug
 ==========
 
-Parallebug solves the once major issue when dealing with debugging in either the console or in the browser (for backend code) - It dumps the data you want to see in a file for viewing in a separate tab so that it does not interupt the current page.
+Parallebug solves the one major issue when dealing with debugging in either the console or in the browser (for backend code) - It dumps the data you want to see in a file for viewing in a separate tab so that it does not interupt the current page.
 
 The great thing about this is that it currently dumps the content in JSON format, which with the use of browsers extensions such as JSON View (https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) allow the developer to easily see a variables current value.
 
