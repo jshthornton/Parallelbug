@@ -1,5 +1,5 @@
 <?php
-include_once('../src/Output2Web.php');
+include_once('../src/Parallelbug.php');
 
 Parallelbug::$dir = __DIR__ . DIRECTORY_SEPARATOR . 'logs';
 
