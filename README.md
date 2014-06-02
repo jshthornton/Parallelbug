@@ -62,7 +62,7 @@ Parallelbug.dump([
 ```
 
 ## Options
-All of the default parameters can be overridden with the 2nd argument. Or if you find yourself using the same options over and over again you can ovverride the default options:
+All of the default parameters can be overridden with the 2nd argument. Or if you find yourself using the same options over and over again you can override the default options:
 
 ```
 Parellebug::$settings['meta'] = false;
