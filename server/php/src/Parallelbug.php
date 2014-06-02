@@ -2,22 +2,26 @@
 
 Class Parallelbug {
 	public static $dir = NULL; // No trailing slash
+	public static $settings = array(
+		//'filename' => uniqid(),
+		'format' => 'json',
+		'meta' => true,
+		'meta_key' => '__meta__',
+		'date_format' => 'Y-m-d H:i:s',
+		'append' => false,
+		'data_key' => 'dump',
+		'append_group_key' => '__append_group__'
+	);
 
 	public static function dump($data, $opts) {
 		// Do not accept dump if $dir is unset
 		if(self::$dir === NULL) return false;
 
 		// Default params
-		$opts = array_merge(array(
-			'filename' => uniqid(),
-			'format' => 'json',
-			'meta' => true,
-			'meta_key' => '__meta__',
-			'date_format' => 'Y-m-d H:i:s',
-			'append' => false,
-			'data_key' => 'dump',
-			'append_group_key' => '__append_group__'
-		), $opts);
+		$settings = self::$settings;
+		$settings['filename'] = uniqid();
+
+		$opts = array_merge($settings, $opts);
 
 		// Construct filepath
 		$filename = self::$dir . DIRECTORY_SEPARATOR . $opts['filename'];
