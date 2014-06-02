@@ -35,7 +35,12 @@ var_dump(Parallelbug::dump(array(
 	'filename' => 'append',
 	'append' => true
 )));
-
+var_dump(Parallelbug::dump(array(
+	'foo2' => 'blah2'
+), array(
+	'filename' => 'append',
+	'append' => true
+)));
 
 var_dump(Parallelbug::dump(true, array(
 	'filename' => 'true'
