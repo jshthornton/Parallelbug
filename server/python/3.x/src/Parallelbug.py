@@ -4,7 +4,7 @@ import time
 import datetime
 import json
 
-# Python 2
+# Python 3
 
 class Parallelbug:
 	dir = None
@@ -27,7 +27,7 @@ class Parallelbug:
 		settings = dict(Parallelbug.settings)
 		settings["filename"] = str(uuid.uuid4())
 
-		opts = dict(settings.items() + opts.items())
+		opts = dict(list(settings.items()) + list(opts.items()))
 
 		filename = os.path.join(Parallelbug.dir, opts["filename"])
 
