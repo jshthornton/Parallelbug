@@ -15,14 +15,14 @@ var_dump(Parallelbug::dump(array(
 	'filename' => 'ass_array'
 )));
 
-// Supposed to fail
+/*// Supposed to fail
 var_dump(Parallelbug::dump(array(
 	'foo' => 'blah'
 ), array(
 	'filename' => 'append_fail',
 	'append' => true
 )));
-
+*/
 var_dump(Parallelbug::dump(array(
 	'foo' => 'blah'
 ), array(

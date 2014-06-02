@@ -53,7 +53,7 @@ Class Parallelbug {
 
 				$_old_data = json_decode($old_data, true);
 
-				if(isset($_old_data[$opts['append_group_key']])) {
+				if(in_array($opts['append_group_key'], $_old_data)) {
 					// The old data is already in an append group, so just push new data
 					$tmp = $_old_data;
 					$tmp[] = $data;
