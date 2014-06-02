@@ -158,3 +158,5 @@ When `append = true` the JSON file has appended onto it the next set of data. Ho
   }
 ]
 ```
+
+**Note:** If the file does not exist whilst using `append = true` errors will be thrown and no file will be created.
