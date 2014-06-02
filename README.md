@@ -5,6 +5,9 @@ Parallebug solves the one major issue when dealing with debugging in either the 
 
 The great thing about this is that it currently dumps the content in JSON format, which with the use of browsers extensions such as JSON View (https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) allow the developer to easily see a variable's current value.
 
+Because this is a micro utility, all you need to do is find the script in this repo for your language, copy the script, and use as per your setup.
+For instance PHP users just need to navigate to `server/php/src`.
+
 # Requirements
 **All**
 * Read/Write permission for a folder
