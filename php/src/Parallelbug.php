@@ -72,7 +72,7 @@ Class Parallelbug {
 				}
 			}
 
-			$_data = json_encode($data);
+			$_data = json_encode($data, JSON_PRETTY_PRINT);
 		}
 
 		if(!isset($_data)) return false;
